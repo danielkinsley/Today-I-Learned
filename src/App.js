@@ -233,8 +233,8 @@ function Fact({ fact, setFacts }) {
 
       <div className="vote-buttons">
         <button onClick={() => handleVote("votesInteresting")} disabled={isUpdating}>👍 <strong>{fact.votesInteresting}</strong></button>
-        <button>🤯 <strong>{fact.votesMindblowing}</strong></button>
-        <button>⛔️ <strong>{fact.votesFalse}</strong></button>
+        <button onClick={() => handleVote("votesMindblowing")} disabled={isUpdating}>🤯 <strong>{fact.votesMindblowing}</strong></button>
+        <button onClick={() => handleVote("votesFalse")} disabled={isUpdating}>⛔️ <strong>{fact.votesFalse}</strong></button>
       </div>
     </li >
   )
